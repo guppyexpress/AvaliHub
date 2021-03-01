@@ -41,12 +41,12 @@ body {
 .sidenav {
 
   border-radius: 25px;
-  height: 100%;
-  width: 160px;
+  width: 100%;
+  height: 160px;
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 100%;
+  top: 40%;
+  left: 0;
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
@@ -62,7 +62,35 @@ body {
 
 .sidenav a:hover {
   color: #f1f1f1;
-    }
+    
+    
+    .alt {
+
+  border-radius: 25px;
+  width: 100%;
+  height: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 40%;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+    
+    
+}
+.alt a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+
+.alt a:hover {
+  color: #f1f1f1;
+}
 .main {
   margin-right: 160px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
@@ -126,15 +154,19 @@ body {
         
         
         <center>
-<!-- <img src="Avalihub.png" alt="AvaliHub icon"> -->
+<img src="Avalihub.png" alt="AvaliHub icon">
         </center>
         
         <!-- side bar context stuffs-->
         
         
        <div class="sidenav">
-                           <center> <a href="null">Click null</a> </center>
-        
+           <center> <a href="login/login.php">Click Here To Login!</a> </center>
+           <br>
+           <br>
+           <br>
+          <u> <center> <a href="home.html" style="font-size: 1vw; text-decoration: none" style="color:#004d80">Or you can click here to go to the main page without logging in.</a> </center></u>
+ 
 </div>
                      
 <div class="main">
