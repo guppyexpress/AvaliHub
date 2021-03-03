@@ -1,7 +1,5 @@
 # Simple Registration/Login code in PHP
 
-Read more:[PHP registration form](http://www.html-form-guide.com/php-form/php-registration-form.html) [PHP login form](http://www.html-form-guide.com/php-form/php-login-form.html)
-
 ## Installation
 
 1. Edit the file `membersite_config.php` in the includes folder and update the configuration information (like your email address, Database login etc)
