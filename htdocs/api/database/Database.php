@@ -1,4 +1,7 @@
-<?php
+<?php namespace Avalihub;
+
+use Exception;
+use mysqli;
 
 class Database
 {
