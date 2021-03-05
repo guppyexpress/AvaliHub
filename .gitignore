@@ -1,2 +1,5 @@
 /database/model.mwb.bak
 .idea/
+.env
+/vendor/
+/tools/composer
