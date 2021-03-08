@@ -1,0 +1,232 @@
+openapi: "3.0.0"
+info:
+  description: "This is the API for Avalihub."
+  version: "1.0.0"
+  title: "Avalihub"
+  
+servers:
+  - url: https://{domain}/api
+    description: Production server
+  - url: https://development.avalihub.katatheavali.com/api
+    description: Development server
+
+tags:
+  - name: user
+    description: Everything about the user
+  
+paths:
+  /user:
+    get:
+      tags:
+        - user
+      security:
+        - sessionAuth: []
+      summary: Returns the current user
+      description: >
+        Returns the currently logged in user.
+      operationId: getCurrentUser
+      responses:
+        200:
+          $ref: '#/components/responses/ReturnUser'
+        404:
+          description: No user is currently logged in.
+    post:
+      tags:
+        - user
+      summary: Creates a new user
+      description: >
+        Creates a new user.
+        On default the users email is not validated.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRequest'
+      operationId: createUser
+      responses:
+        201:
+          $ref: '#/components/responses/ReturnUser'
+        404:
+          $ref: '#/components/responses/404'
+        409:
+          description: The email or the username is already used
+  /user/login:
+    post:
+      tags:
+        - user
+      summary: Logs in the user
+      operationId: login
+      responses:
+        201:
+          $ref: '#/components/responses/ReturnUser'
+        401:
+          description: Email or password is wrong
+        403:
+          description: Email is not verified
+        404:
+          description: Something went wrong
+  /user/logout:
+    delete:
+      tags:
+        - user
+      summary: Logs out the user
+      description: >
+        Logs out the currently logged in user
+      operationId: logout
+      responses:
+        200:
+          description: User successfully logged out
+  /user/{id}:
+    summary: Represents a user
+    description: >
+      This resource represents an individual user in the system.
+      Each user is identified by a numeric positive `id`.
+    parameters:
+      - $ref: '#/components/parameters/idParam'
+    get:
+      tags:
+        - user
+      summary: Get user with specified id
+      responses:
+        200:
+          $ref: '#/components/responses/ReturnUser'
+        404:
+          description: No user with given `id` exists
+
+components:
+  securitySchemes:
+    sessionAuth:
+      type: apiKey
+      in: cookie
+      name: PHPSESSID
+  parameters:
+    idParam:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+  responses:
+    ReturnUser:
+      description: Successfull operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UserResponse'
+    404:
+      description: Something went wrong
+  schemas:
+    UserGeneral:
+      type: object
+      properties:
+        username:
+          type: string
+          maxLength: 45
+        name:
+          type: string
+          maxLength: 100
+        email:
+          type: string
+          maxLength: 100
+    UserRequest:
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/UserGeneral'
+        - type: object
+          properties:
+            password:
+              type: string
+              maxLength: 20
+          required:
+            - username
+            - name
+            - email
+            - password
+    UserResponse:
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/UserGeneral'
+        - type: object
+          properties:
+            id:
+              type: integer
+              minimum: 1
+            email:
+              nullable: true
+              description: Will only be visible to yourself.
+            emailValid:
+              type: boolean
+            createTime:
+              type: string
+              format: date-time
+            lastUpdate:
+              type: string
+              format: date-time
+            active:
+              type: boolean
+    Upload:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        name:
+          type: string
+          maxLength: 100
+        type:
+          type: string
+          enum: [image, video, gif]
+        uploadBy:
+          $ref: '#/components/schemas/UserResponse'
+        location:
+          type: string
+          maxLength: 150
+        description:
+          type: string
+          nullable: true
+        createTime:
+          type: string
+          format: date-time
+        lastUpdate:
+          type: string
+          format: date-time
+        active:
+          type: boolean
+    Tag:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        name:
+          type: string
+          maxLength: 45
+        active:
+          type: boolean
+    Comment:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        commentBy:
+          $ref: '#/components/schemas/UserResponse'
+        text:
+          type: string
+        comments:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommentCircular'
+          nullable: true
+        createTime:
+          type: string
+          format: date-time
+        lastUpdate:
+          type: string
+          format: date-time
+        active:
+          type: boolean
+    CommentCircular:
+      $ref: '#/components/schemas/Comment'
