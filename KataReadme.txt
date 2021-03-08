@@ -17,3 +17,4 @@ also i hope you enjoy my 404 error page and my loading screen page!
 
 (also yes i know the way i program is disgusting and looks horrible but thats just the way my brain thinks and i understand those files better for some reason when they are written like that)
 
+oh and u can delete this message after u read it! i just wanted to leave this here for you
