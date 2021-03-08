@@ -1,73 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="icon" href="/AvaliHub/images/Avalihub.ico" type="image/icon">
+   <meta charset="utf-8">
+
+    <title>Avali Hub</title>
+    <meta name="description" content="A site for all the floofy avali photos, videos, gifs and more!
+    <meta name="author" content="Nebo 
+Contact: Twitter @NeboAvali ">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(0, 0, 0);
 }
-   </style>
-   
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
+</style>
+<style> 
+input[type=text] {
+  width: 130px;
   box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  /*background-image: url('/AvaliHub/images/search.png');*/
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-/* The grid: Four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-
-/* Style the images inside the grid */
-.column img {
-  opacity: 0.8; 
-  cursor: pointer; 
-}
-
-.column img:hover {
-  opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
+input[type=text]:focus {
+  width: 100%;
 }
 </style>
 </head>
@@ -75,49 +42,9 @@ body {
 
 
 
-<!-- The four columns -->
-<div class="row">
-  <div class="column">
-    <img src="reeeeTest.png"  style="width:30%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="NeboTest.png"  style="width:30%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="NeboTest2.png"  style="width:30%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="null" alt="null" style="width:30%" onclick="myFunction(this);">
-  </div>
-</div>
-
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:30%">
-  <div id="imgtext"></div>
-</div>
-
-<script>
-function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
-}
-</script>
-   
-   
-</head>
-<body>
-<form action="/AvaliHub/upload.php">
-  <input type="file" id="myFile" name="filename">
-  <input type="submit">
+<form>
+  <input type="text" name="search" placeholder="Search">
 </form>
 
-   
-<center>
-    <img src="AvaliHub/images/avalihub.png" alt="AvaliHub icon">
-            </center>
 </body>
 </html>
