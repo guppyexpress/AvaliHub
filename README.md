@@ -12,3 +12,7 @@ installed with the included [script](tools/install-composer.sh). After installat
 ```
 
 You also need to create a ``.env`` file. An [example](.env.example) is provided. 
+
+## API
+
+The documentation for the REST API can be found [here](https://editor.swagger.io/?url=https://raw.githubusercontent.com/guppyexpress/AvaliHub/backend/api.yaml).
