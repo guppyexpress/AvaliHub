@@ -14,51 +14,53 @@ Contact: Twitter @NeboAvali ">
 <link rel="stylesheet" href="/AvaliHub/htdocs/css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-* {box-sizing: border-box;}
-
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
 }
 
+* {
+  box-sizing: border-box;
+}
 
-
-.topnav .search-container {
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
   float: left;
-    margin-left:0%;
+  width: 80%;
+  background: #f1f1f1;
 }
 
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
   font-size: 17px;
-  border: none;
-  margin-left:0%;
-}
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
+  border: 1px solid grey;
+  border-left: none;
   cursor: pointer;
 }
 
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 </style>
 </head>
 <body>
 
-<div class="topnav">
+<form class="example" action="/action_page.php" style=";max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
 
-  <div class="search-container">
-    <form action="/AvaliHub/search">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </div>
   
 </body>
 </html>
