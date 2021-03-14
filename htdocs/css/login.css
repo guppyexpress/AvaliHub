@@ -35,7 +35,7 @@ hr {
 }
 
 /* Set a style for the submit button */
-.registerbtn {
+.registerBtn {
     background-color: #f59b00;
     color: white;
     padding: 16px 20px;
@@ -46,7 +46,7 @@ hr {
     opacity: 0.9;
 }
 
-.registerbtn:hover {
+.registerBtn:hover {
     opacity: 1;
 }
 
@@ -56,7 +56,7 @@ a {
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
-.signin {
+.signIn {
     background-color: #f59b00;
     text-align: center;
 }

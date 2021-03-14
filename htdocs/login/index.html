@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html>
-   <title>AvaliHub</title>
+<html lang="en">
 <head>
-   <link rel="icon" href="/AvaliHub/images/Avalihub.ico" type="image/icon">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/AvaliHub/htdocs/css/register.css">
+    <title>AvaliHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body>
+<form action="../home/">
+    <!-- TODO: This won't work with a form either. -->
+    <div class="container">
+        <h1 class="white">Login</h1>
+        <p class="white">Please fill in this form to Login To AvaliHub</p>
+        <hr>
 
-<form action="/AvaliHub/htdocs/home/">
-  <div class="container">
-    <h1  style="color:white;">Login</h1>
-    <p  style="color:white;">Please fill in this form to Login To AvaliHub</p>
-    <hr>
+        <label for="email"><b class="white">Email Address Or Username</b></label>
+        <input type="text" placeholder="Enter Email Address Or Username" id="email" required>
 
-    <label for="email"><b style="color:white;">Email Address Or Username</b></label>
-    <input type="text" placeholder="Enter Email Address Or Username"  id="email" required>
+        <label for="psw"><b class="white">Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw" required>
 
-    <label for="psw"><b  style="color:white;">Password</b></label>
-    <input type="password" placeholder="Enter Password"  id="psw" required>
+        <button type="submit" class="registerBtn"> Login</button>
+    </div>
+</form>
 
-  
-    <button type="submit" class="registerbtn"> Login</button>
-  </div>
-  
-  
-<center>
-  <img src="/AvaliHub/images/Avalihub.png" alt="AvaliHub icon">
-            </center>
+<img src="../images/AvalihubTransparent.png" alt="AvaliHub icon">
 </body>
 </html>
