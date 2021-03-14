@@ -36,9 +36,9 @@ form.example::after {
   clear: both;
   display: table;
 }
-</style>
+
 <!-- upload button-->
-<style>
+
 .upload-btn-wrapper {
   position: relative;
   overflow: hidden;
