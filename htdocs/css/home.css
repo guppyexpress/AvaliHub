@@ -37,13 +37,13 @@ form.example::after {
   display: table;
 }
 
-<!-- upload button-->
+
 
 .upload-btn-wrapper {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  float: right;
+  
 }
 
 .btn {
