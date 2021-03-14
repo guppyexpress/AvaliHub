@@ -39,29 +39,3 @@ form.example::after {
 
 
 
-.upload-btn-wrapper {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  
-}
-
-.btn {
-  border: 2px solid #ff6600;
-  color: white;
-  background-color: #ff6600;
-  padding: 8px 20px;
-  border-radius: 8px;
-  font-size: 20px;
-  font-weight: bold;
-  float: right;
-}
-
-.upload-btn-wrapper input[type=file] {
-  font-size: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  float: right;
-}
