@@ -1,103 +1,58 @@
 <!DOCTYPE html>
 <html>
-   <title>AvaliHub</title>
+<title>AvaliHub</title>
 <head>
-   <link rel="icon" href="/AvaliHub/images/Avalihub.ico" type="image/icon">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/AvaliHub/htdocs/css/register.css">
+    <link rel="icon" href="/AvaliHub/images/Avalihub.ico" type="image/icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/AvaliHub/htdocs/css/register.css">
+    <script src="../js/general.js"></script>
 </head>
 <body>
 
-  <form action="/AvaliHub/htdocs/home">
-  <div class="container">
-    <h1  style="color:white;">Register</h1>
-    <p  style="color:white;">Please fill in this form to create an account.</p>
-    <hr>
+<form action="/AvaliHub/htdocs/home">
+    <div class="container">
+        <h1 style="color:white;">Register</h1>
+        <p style="color:white;">Please fill in this form to create an account.</p>
+        <hr>
 
-    <label for="email"><b style="color:white;">Email Address</b></label>
-    <input type="text" placeholder="Enter Email"  id="email" required>
-    <label for="email"><b style="color:white;">Username</b></label>
-    <input type="text" placeholder="Enter Username"  id="Username" required>
-    <label for="psw"><b  style="color:white;">Password</b></label>
-    <input type="password" placeholder="Enter Password"  id="psw" required>
+        <label for="email"><b style="color:white;">Email Address</b></label>
+        <input type="text" placeholder="Enter Email" id="email" required>
+        <label for="email"><b style="color:white;">Username</b></label>
+        <input type="text" placeholder="Enter Username" id="Username" required>
+        <label for="psw"><b style="color:white;">Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw" required>
 
-    <label for="psw-repeat"><b style="color:white;">Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password"  id="psw-repeat" required>
-    <hr>
-    <p  style="color:white;">By creating an account you agree to our <a href="/AvaliHub/htdocs/tos">Terms & Privacy</a>.</p>
+        <label for="psw-repeat"><b style="color:white;">Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" id="psw-repeat" required>
+        <hr>
+        <p style="color:white;">By creating an account you agree to our <a href="/AvaliHub/htdocs/tos">Terms &
+            Privacy</a>.</p>
 
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-  
-  <div class="container signin">
-    <p style="color:white;">Already have an account? <a href="/AvaliHub/htdocs/login/">Sign in</a>.</p>
-  </div>
+        <button type="submit" class="registerbtn">Register</button>
+    </div>
+
+    <div class="container signin">
+        <p style="color:white;">Already have an account? <a href="/AvaliHub/htdocs/login/">Sign in</a>.</p>
+    </div>
 </form>
 <center>
     <img src="/AvaliHub/images/Avalihub.png" alt="AvaliHub icon">
-            </center>
+</center>
 
-            <script type="text/javascript" src="/AvaliHub/htdocs/jquery.serializejson.js"></script>
+<script type="text/javascript" src="/AvaliHub/htdocs/jquery.serializejson.js"></script>
 
+<div>
+    <script>
+        makeRestCall('POST', '/user', function () {
+            alert('User successfully created!')
+        }, JSON.stringify({
+            "username": "string",
+            "name": "string",
+            "email": "string",
+            "password": "string"
+        }));
+    </script>
+</div>
 
-
-
-            <div>
-              <script>
-               function makeRestCall(method, url, successFunction, data = null) {
-                  const xhr = new XMLHttpRequest();
-              
-                  xhr.onreadystatechange = function () {
-                      if (xhr.readyState === 4) {
-                          if (xhr.status === 200 || xhr.status === 201) {
-                              restartTimeout();
-              
-                              successFunction();
-                          } else if (xhr.status === 401) {
-                              alert('');
-                          } else if (xhr.status === 404) {
-                              alert('');
-                          } else {
-                              alert('');
-                          }
-              
-                          if (!(xhr.status === 200 || xhr.status === 201)) {
-                              console.error(method, url, xhr.responseText);
-                          }
-                      }
-                  }
-              
-                  http://xhr.open(method, `/rest${url}`, true);
-              
-                  xhr.send(data);
-              
-                  return xhr;
-              }
-              
-              
-              makeRestCall('POST', '/rest/containers/', function () {
-                              modal.close();
-                              reloadContainers();
-                          }, JSON.stringify({
-                              "containerNumber": modalBodyNumberInput.value(),
-                              "type": modalBodyTypeInput.value(),
-                          }));
-              const xhr = makeRestCall('GET', `/container/content/${id}/`, function () {
-                      const content = JSON.parse(xhr.responseText);
-              
-                  });
-              
-              
-              </script>
-              </div>
-              
-              
-              
-              
-
-         
-
-      
-            
 </body>
 </html>
