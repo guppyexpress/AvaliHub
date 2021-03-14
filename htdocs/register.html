@@ -90,6 +90,59 @@ a {
     <button type="submit" class="registerbtn">Register</button>
   </div>
   
+
+<div>
+<script>
+ function makeRestCall(method, url, successFunction, data = null) {
+    const xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200 || xhr.status === 201) {
+                restartTimeout();
+
+                successFunction();
+            } else if (xhr.status === 401) {
+                alert('');
+            } else if (xhr.status === 404) {
+                alert('');
+            } else {
+                alert('');
+            }
+
+            if (!(xhr.status === 200 || xhr.status === 201)) {
+                console.error(method, url, xhr.responseText);
+            }
+        }
+    }
+
+    http://xhr.open(method, `/rest${url}`, true);
+
+    xhr.send(data);
+
+    return xhr;
+}
+
+
+makeRestCall('POST', '/rest/containers/', function () {
+                modal.close();
+                reloadContainers();
+            }, JSON.stringify({
+                "containerNumber": modalBodyNumberInput.value(),
+                "type": modalBodyTypeInput.value(),
+            }));
+const xhr = makeRestCall('GET', `/container/content/${id}/`, function () {
+        const content = JSON.parse(xhr.responseText);
+
+    });
+
+
+</script>
+</div>
+
+
+
+
   <div class="container signin">
     <p style="color:white;">Already have an account? <a href="/AvaliHub/htdocs/loginpage.html">Sign in</a>.</p>
   </div>
