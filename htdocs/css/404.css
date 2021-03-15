@@ -11,7 +11,7 @@ body {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    padding: 100%;
+    
 }
 
 .text h1 {
