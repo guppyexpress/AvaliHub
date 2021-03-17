@@ -67,3 +67,5 @@ body {
     left: 0;
     box-shadow: inset 0 0 40px 2px #bbbbbb, 0 0 20px 4px #998d77;
 }
+.nocursor { 
+    cursor:none; }
