@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial;
 }
@@ -5,6 +7,18 @@ body {
 * {
     box-sizing: border-box;
 }
+
+#box{
+    border-radius: 25px;
+    background: grey;
+ 
+    width: 30vw;
+    height: 10vw;  
+    position: absolute;
+    top: 34%;
+    left: 35%;
+}
+
 
 form.example input[type=text] {
     padding: 10px;
@@ -35,4 +49,16 @@ form.example::after {
     content: "";
     clear: both;
     display: table;
+}
+#centerSearch{
+    position: absolute;
+    top: 43%;
+    left: 43%;
+}
+#context{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    color: white;
+    font-size: 17px;
 }
