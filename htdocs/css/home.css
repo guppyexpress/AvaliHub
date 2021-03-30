@@ -52,13 +52,13 @@ form.example::after {
 }
 #centerSearch{
     position: absolute;
-    top: 43%;
-    left: 43%;
+    top: 50%;
+    left: 50%;
 }
 #context{
     position: absolute;
     top: 35%;
-    left: 40%;
+    left: 50%;
     color: white;
     font-size: 17px;
 }
