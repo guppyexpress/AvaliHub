@@ -3,7 +3,7 @@
 body {
     font-family: Arial;
     
-form {
+#form {
   background-color: #ff6600;
   width: 300px;
   height: 44px;
@@ -13,7 +13,7 @@ form {
   align-items: center;
 }
     
-    input {
+    #input {
   all: unset;
   font: 16px system-ui;
   color: #fff;
