@@ -12,11 +12,15 @@ body {
     border-radius: 25px;
     background: grey;
  
-    width: 30vw;
-    height: 10vw;  
-    position: absolute;
-    top: 34%;
-    left: 35%;
+    width: 30em;
+    height: 10em;  
+     border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
 }
 
 
@@ -69,4 +73,4 @@ form.example::after {
         transform: translate(-50%, -50%) }
     color: white;
     font-size: 17px;
-}
+
