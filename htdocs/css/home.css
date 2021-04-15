@@ -2,63 +2,7 @@
 
 body {
     font-family: Arial;
-}
 
-* {
-    box-sizing: border-box;
-}
-
-#box{
-    border-radius: 25px;
-    background: grey;
- 
-    width: 30em;
-    height: 10em;  
-     border-radius: 1em;
-        padding: 1em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%) 
-}
-
-
-form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-}
-
-form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #ff6600;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-}
-
-form.example button:hover {
-    background: #e65c00;
-}
-
-form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-#centerSearch{
-    position: absolute;
-    top: 40%;
-    left: 39%;
-}
 #context{
  /*   position: absolute;
     top: 31%;
@@ -70,7 +14,8 @@ form.example::after {
         top: 50%;
         left: 50%;
         margin-right: -50%;
-        transform: translate(-50%, -50%) }
+        transform: translate(-50%, -50%) 
     color: white;
     font-size: 17px;
 
+    }
