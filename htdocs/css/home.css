@@ -3,6 +3,22 @@
 body {
     font-family: Arial;
 
+    .search-box{
+        
+        position: aboslute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) 
+        background: ##ff7b00;
+        height: 40px;
+            border-radius: 40px;
+        padding: 10px;
+        
+    }
+    
+    
+    
+    
 #context{
  /*   position: absolute;
     top: 31%;
