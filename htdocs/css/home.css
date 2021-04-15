@@ -2,42 +2,30 @@
 
 body {
     font-family: Arial;
-* {
-  box-sizing: border-box;
-}
-  
     
-    form.search input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-}
-
-form.search button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #ff7b00;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-}
-
-form.search button:hover {
-  background: #cc4700;
-}
-
-form.search::after {
-  content: "";
-  clear: both;
-  display: table;
+form {
+  background-color: #ff6600;
+  width: 300px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
     
+    input {
+  all: unset;
+  font: 16px system-ui;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+    
+    ::placeholder {
+  color: #fff;
+  opacity: 0.7; 
+}
     
 #context{
  /*   position: absolute;
