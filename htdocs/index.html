@@ -20,9 +20,9 @@ $srchErr = "";
 $srch   
     
      if (empty($_GET["srch"])) {
-    $comment = "";
+    $srch = "";
   } else {
-    $comment = test_input($_GET["srch"]);
+    $srch = test_input($_GET["srch"]);
   }
     
     function test_input($data) {
