@@ -19,10 +19,10 @@
 $srchErr = "";
 $srch   
     
-     if (empty($_POST["srch"])) {
+     if (empty($_GET["srch"])) {
     $comment = "";
   } else {
-    $comment = test_input($_POST["srch"]);
+    $comment = test_input($_GET["srch"]);
   }
     
     function test_input($data) {
@@ -92,7 +92,7 @@ search {
   </head>
     
   <body>
-    <form id="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+    <form id="form" method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
         
    <input type="text" name="search"  placeholder="Search..." value="">
   <span class="error"> <?php echo $srchErr;?></span> <br>
