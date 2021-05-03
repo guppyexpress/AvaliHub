@@ -10,7 +10,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 	<title>AvaliHub</title>
 	 <link rel="stylesheet" type="text/css" href="css/home.css"> 
      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-     <meta name="description" content="A site for all the floofy avali photos, videos, gifs and more!">
+    
 </head>
 <body>
 
