@@ -9,6 +9,4 @@ https://discord.gg/mMQrvu3aUj
 
 
 
-# 404 
-
-the 404.html has to stay outside of any folder for the redirect to the 404 ON GITHUB PAGES ONLY, and as of testing the 404 100% works now
+# none of this makes sense but hey, its almost ready! just gotta fancy up a hair bit more css and provide space for advertisements and we online!
