@@ -25,7 +25,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </h1>
 
      
-     
+     <div class= square>
+ </div>
 <h2 class='uploadStuff'>
      <form action="upload.php" method="post" enctype="multipart/form-data"> 
     Select Image File to Upload:
